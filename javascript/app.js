@@ -23,6 +23,7 @@ function getQuotes() {
                 quotesData = JSON.parse(jsonQuotes);
                 console.log('quotesData');
                 console.log(quotesData);
+                console.log(quotesData.length);
             }
         },
         error: function (errThrown) {

@@ -38,39 +38,59 @@
 
 .author {
     font-size: 2rem;
-    margin-top: 5px;
+    margin: 15px 0;
     border-bottom: 3px dashed #d8cb84;
 }
 
 .container button {
-    margin-top: 15px;
-    width: 9em;
-    height: 3em;
-    border-radius: 30em;
-    font-size: 15px;
-    font-family: inherit;
-    border: none;
     position: relative;
-    overflow: hidden;
-    z-index: 1;
-    box-shadow: 6px 6px 12px #c5c5c5,
-                -6px -6px 12px #ffffff;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
 }
 
 .container button::before {
-    content: '';
-    width: 0;
-    height: 3em;
-    border-radius: 30em;
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
-    transition: .5s ease;
     display: block;
-    z-index: -1;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.container button span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+
+.container button svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
 }
 
 .container button:hover::before {
-    width: 9em;
+    width: 100%;
+    background: #b1dae7;
+}
+
+.container button:active {
+    transform: scale(0.95);
 }
