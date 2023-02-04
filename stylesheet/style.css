@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    margin: 3.5rem 10rem;
+    border: 5rem solid #FAD883;
+    background-color: antiquewhite;
+    padding: 100px;
+    box-shadow: 3px 3px 25px 11px rgba(39, 30, 6, 0.35);
+    border-radius: 15px;
+}
+
+.container .title {
+    position: absolute;
+    top: 15%;
+}
+
+.quotes {
+    font-size: 35px;
+    text-align: center;
+    font-style: oblique;
+}
+
+.author::before, .quotes::before {
+    content: '" ';
+    font-size: 2.5rem;
+    color: #d34e4e;
+    font-style: oblique;
+}
+
+.author {
+    font-size: 2rem;
+    margin-top: 5px;
+    border-bottom: 3px dashed #d8cb84;
+}
+
+.container button {
+    margin-top: 15px;
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+}
+
+.container button::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.container button:hover::before {
+    width: 9em;
+}
